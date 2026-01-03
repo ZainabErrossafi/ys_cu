@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ray_dda.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yanait-e <yanait-e@student.42.fr>          #+#  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026-01-03 03:50:01 by yanait-e          #+#    #+#             */
+/*   Updated: 2026-01-03 03:50:01 by yanait-e         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
 void	perform_dda(t_game *game, t_ray *ray)
@@ -16,9 +28,6 @@ void	perform_dda(t_game *game, t_ray *ray)
 			ray->map_y += ray->step_y;
 			ray->side = 1;
 		}
-		if (ray->map_y < 0 || ray->map_y >= game->map_height ||
-			ray->map_x < 0 || ray->map_x >= (int)ft_strlen(game->map[ray->map_y]))
-			break ;
 		if (game->map[ray->map_y][ray->map_x] == '1')
 			ray->hit = 1;
 	}

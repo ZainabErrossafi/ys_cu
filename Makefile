@@ -18,12 +18,12 @@ SRCS = main.c \
        raycasting/ray_draw.c \
        raycasting/ray_dda.c \
        mouvement/mouvement.c \
+       mouvement/mouvement_utils.c \
        mouvement/rotation.c \
        mouvement/hooks.c \
        garbage_collector/garbage_collector.c \
        get_next_line/get_next_line.c \
        get_next_line/get_next_line_utils.c 
-
 
 OBJS = $(SRCS:.c=.o)
 

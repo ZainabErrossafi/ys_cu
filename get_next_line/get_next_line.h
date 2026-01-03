@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zainab <zainab@student.42.fr>              +#+  +:+       +#+        */
+/*   By: zerrossa <zerrossa@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 13:07:51 by zerrossa          #+#    #+#             */
-/*   Updated: 2025/12/05 23:45:46 by zainab           ###   ########.fr       */
+/*   Updated: 2026/01/03 14:47:59 by zerrossa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,11 @@
 #  define BUFFER_SIZE 0
 # endif
 
+# include "../cub3d.h"
 # include <fcntl.h>
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "../cub3d.h"
-// #include "../cub"
 
-
-// char    *get_next_line(int fd, t_gc *gc);
-// size_t  ft_strlen(char *str);
-// char    *ft_strchr(char *s, int c);
-char    *ft_strjoin_gc(char *s1, char *s2, t_gc *gc);
-
-// char	*get_next_line(int fd);
-// char	*ft_strchr(char *s, int c);
-// char	*ft_strjoin(char *s1, char *s2);
-// size_t	ft_strlen(char *str);
-
+char	*ft_strjoin_gc(char *s1, char *s2, t_gc *gc);
 #endif

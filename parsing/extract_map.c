@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   extract_map.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zerrossa <zerrossa@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/03 14:36:34 by zerrossa          #+#    #+#             */
+/*   Updated: 2026/01/03 14:36:36 by zerrossa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
 static int	validate_map_start(char **lines, int total_lines, int *start)
@@ -54,7 +66,8 @@ static void	fill_map_line(char *dest, char *src, int max_width)
 	dest[max_width] = '\0';
 }
 
-static int	allocate_and_fill_grid(t_gc *gc, t_map *map, char **lines, int start)
+static int	allocate_and_fill_grid(t_gc *gc, t_map *map, char **lines,
+		int start)
 {
 	int	i;
 

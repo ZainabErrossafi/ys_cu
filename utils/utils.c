@@ -1,19 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zerrossa <zerrossa@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/03 14:56:50 by zerrossa          #+#    #+#             */
+/*   Updated: 2026/01/03 14:57:19 by zerrossa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
-size_t  ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-    size_t  i;
+	size_t	i;
 
-    if (!str)
-        return (0);
-    i = 0;
-    while (str[i])
-    {
-        i++;
-    }
-    return (i);
+	if (!str)
+		return (0);
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
 }
-
 
 char	*ft_strdup(t_gc *gc, const char *s)
 {
@@ -74,8 +85,8 @@ int	ft_atoi(const char *str)
 
 char	*ft_strchr(const char *s, int c)
 {
-	if(!s)
-		return(NULL);
+	if (!s)
+		return (NULL);
 	while (*s)
 	{
 		if (*s == (char)c)

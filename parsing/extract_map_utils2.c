@@ -1,38 +1,52 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   extract_map_utils2.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zerrossa <zerrossa@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/03 14:36:14 by zerrossa          #+#    #+#             */
+/*   Updated: 2026/01/03 14:36:22 by zerrossa         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../cub3d.h"
 
-int count_map_lines(char **lines, int start, int total_lines)
+int	count_map_lines(char **lines, int start, int total_lines)
 {
-    int count;
-    int i;
-    
-    count = 0;
-    i = start;
-    while (i < total_lines)
-    {
-        if (is_line_empty(lines[i]))
-            break;
-        count++;
-        i++;
-    }
-    return (count);
+	int	count;
+	int	i;
+
+	count = 0;
+	i = start;
+	while (i < total_lines)
+	{
+		if (is_line_empty(lines[i]))
+			break ;
+		count++;
+		i++;
+	}
+	return (count);
 }
 
-int check_after_map(char **lines, int map_end, int total_lines)
+int	check_after_map(char **lines, int map_end, int total_lines)
 {
-    int i;
-    
-    i = map_end;
-    while (i < total_lines)
-    {
-        if (!is_line_empty(lines[i]))
-        {
-            printf("Error\nContenu invalide après la map à la ligne %d\n", i + 1);
-            return (0);
-        }
-        i++;
-    }
-    return (1);
+	int	i;
+
+	i = map_end;
+	while (i < total_lines)
+	{
+		if (!is_line_empty(lines[i]))
+		{
+			printf("Error\nContenu invalide après la map à la ligne %d\n", i
+				+ 1);
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }
+
 t_map	*init_map_struct(t_gc *gc)
 {
 	t_map	*map;

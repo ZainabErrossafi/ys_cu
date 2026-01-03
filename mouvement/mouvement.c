@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mouvement.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yanait-e <yanait-e@student.42.fr>          #+#  +:+       +#+        */
+/*   By: zerrossa <zerrossa@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-12-05 23:01:38 by yanait-e          #+#    #+#             */
-/*   Updated: 2025-12-05 23:01:38 by yanait-e         ###   ########.fr       */
+/*   Created: 2025/12/05 23:01:38 by yanait-e          #+#    #+#             */
+/*   Updated: 2026/01/03 14:53:49 by zerrossa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	is_wall(t_game *g, double x, double y)
 	return (0);
 }
 
-static void	try_move(t_game *g, double dx, double dy)
+void	try_move(t_game *g, double dx, double dy)
 {
 	double	nx;
 	double	ny;
@@ -37,26 +37,6 @@ static void	try_move(t_game *g, double dx, double dy)
 		g->player.pos_x = nx;
 		g->player.pos_y = ny;
 	}
-}
-
-void	move_forward(t_game *g)
-{
-	try_move(g, g->player.dir_x * MOVE_SPEED, g->player.dir_y * MOVE_SPEED);
-}
-
-void	move_backward(t_game *g)
-{
-	try_move(g, -g->player.dir_x * MOVE_SPEED, -g->player.dir_y * MOVE_SPEED);
-}
-
-void	move_left(t_game *g)
-{
-	try_move(g, -g->player.plane_x * MOVE_SPEED, -g->player.plane_y * MOVE_SPEED);
-}
-
-void	move_right(t_game *g)
-{
-	try_move(g, g->player.plane_x * MOVE_SPEED, g->player.plane_y * MOVE_SPEED);
 }
 
 static int	handle_move_keys(t_game *game)
